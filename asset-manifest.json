@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/internet-shop-scandiweb/static/css/main.90f6920e.css",
-    "main.js": "/internet-shop-scandiweb/static/js/main.0d4fcb97.js",
+    "main.js": "/internet-shop-scandiweb/static/js/main.f9ffbb7b.js",
     "static/media/a-logo.svg": "/internet-shop-scandiweb/static/media/a-logo.aa8aea486fcc496a6f8322e3d85d02b4.svg",
     "static/media/empty-cart.svg": "/internet-shop-scandiweb/static/media/empty-cart.54031f95425f8f8852b76cee4a7093f4.svg",
     "static/media/cart-logo.svg": "/internet-shop-scandiweb/static/media/cart-logo.107200de550aa9c01e40546f7017578d.svg",
@@ -9,10 +9,10 @@
     "static/media/closed.svg": "/internet-shop-scandiweb/static/media/closed.766d7b11f183f77a1e40c47ea18dd7ee.svg",
     "static/media/opened.svg": "/internet-shop-scandiweb/static/media/opened.f50a5cf5cf8bfef55adfa0e02aae74ee.svg",
     "main.90f6920e.css.map": "/internet-shop-scandiweb/static/css/main.90f6920e.css.map",
-    "main.0d4fcb97.js.map": "/internet-shop-scandiweb/static/js/main.0d4fcb97.js.map"
+    "main.f9ffbb7b.js.map": "/internet-shop-scandiweb/static/js/main.f9ffbb7b.js.map"
   },
   "entrypoints": [
     "static/css/main.90f6920e.css",
-    "static/js/main.0d4fcb97.js"
+    "static/js/main.f9ffbb7b.js"
   ]
 }
