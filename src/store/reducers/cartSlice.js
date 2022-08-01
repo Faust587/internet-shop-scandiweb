@@ -10,16 +10,16 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addProductToCart: (state, action) => {
-      state.push(action.payload);
+      state.productList.push(action.payload);
     },
     incrementProductCounter: (state, action) => {
-      state[action.payload].amount++;
+      state.productList[action.payload].amount++;
     },
     decrementProductCounter: (state, action) => {
-      state[action.payload].amount--;
+      state.productList[action.payload].amount--;
     },
     deleteProductFromCart: (state, action) => {
-      state.splice(action.payload, 1);
+      state.productList.splice(action.payload, 1);
     }
   }
 });

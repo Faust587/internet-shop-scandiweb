@@ -41,6 +41,7 @@ export const GET_PRODUCT_BY_ID_QUERY = gql`
       brand,
       gallery,
       description,
+      inStock,
       prices {
         currency {
           label
