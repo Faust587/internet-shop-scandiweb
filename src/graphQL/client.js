@@ -1,7 +1,7 @@
 import {ApolloClient, ApolloLink, HttpLink, InMemoryCache} from "@apollo/client";
 
 const httpLink = new HttpLink({
-  uri: process.env.REACT_APP_API_URL,
+  uri: "https://ancient-ocean-59119.herokuapp.com/",
 });
 
 export const client = new ApolloClient({

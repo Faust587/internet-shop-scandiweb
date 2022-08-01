@@ -7,8 +7,10 @@ import MainLayout from "./UI/layout/MainLayout";
 function App() {
 
   return (
+    /*<BrowserRouter basename="/internet-shop-scandiweb">*/
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<MainLayout />} />
         <Route path="category/:categoryName" element={<MainLayout><CategoryPage /></MainLayout>} />
         <Route path="category/:categoryName/product/:productId" element={<MainLayout><ProductPage /></MainLayout>} />
       </Routes>
