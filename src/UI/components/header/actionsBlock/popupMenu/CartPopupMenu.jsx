@@ -5,10 +5,12 @@ import {useQuery} from "@apollo/client";
 import {GET_CURRENCIES_QUERY} from "../../../../../graphQL/Queries";
 import {useSelector} from "react-redux";
 import ProductItem from "../productItem/ProductItem";
+import {useNavigate} from "react-router-dom";
 
-const CartPopupMenu = () => {
+const CartPopupMenu = ({setActive}) => {
 
   const {data, loading, error} = useQuery(GET_CURRENCIES_QUERY);
+  const navigate = useNavigate();
   const currencyId = useSelector(state => state.currencyReducer.currencyId);
   const productList = useSelector(state => state.cartReducer.productList);
   const {getProductAmount, getTotalAmount} = useCart();
@@ -19,7 +21,7 @@ const CartPopupMenu = () => {
   if (error) return <pre>{error.message}</pre>
 
   return (
-    <CartLayout>
+    <CartLayout onClick={(e) => e.stopPropagation()}>
       <ItemsCounter>
         <BoldText>My Bag,</BoldText>
         {` ${productAmount} items`}
@@ -37,8 +39,15 @@ const CartPopupMenu = () => {
           <span>{totalAmount}{data["currencies"][currencyId].symbol}</span>
         </TotalAmount>
         <ButtonsWrapper>
-          <ViewBagButton>VIEW BAG</ViewBagButton>
-          <CheckOutButton>CHECK OUT</CheckOutButton>
+          <ViewBagButton onClick={() => {
+            navigate("/cart");
+            setActive(false);
+          }}>VIEW BAG</ViewBagButton>
+          <CheckOutButton onClick={() => {
+            if (productAmount === 0) return;
+            navigate("/success-order");
+            setActive(false);
+          }}>CHECK OUT</CheckOutButton>
         </ButtonsWrapper>
       </div>
     </CartLayout>

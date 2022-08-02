@@ -5,7 +5,7 @@ import {cartSlice} from "../store/reducers/cartSlice";
 export const useCart = () => {
 
   const dispatch = useDispatch();
-  const {addProductToCart, incrementProductCounter} = cartSlice.actions;
+  const {addProductToCart, incrementProductCounter, decrementProductCounter, clearCart} = cartSlice.actions;
   const productList = useSelector(state => state.cartReducer.productList);
   const currencyId = useSelector(state => state.currencyReducer.currencyId);
 
@@ -35,6 +35,10 @@ export const useCart = () => {
     return counter;
   }
 
+  function clearProductCart () {
+    dispatch(clearCart());
+  }
+
   function getTotalAmount () {
     let totalAmount = 0;
     productList.map(({prices, amount}) => {
@@ -43,5 +47,21 @@ export const useCart = () => {
     return `${totalAmount.toFixed(2)}`;
   }
 
-  return {addToCart, getProductAmount, getTotalAmount};
+  function incrementProductAmount({productId, attributes}) {
+    productList.forEach(({id, chosenAttributes}, index) => {
+      if (id === productId && _.isEqual(chosenAttributes, attributes)) {
+        dispatch(incrementProductCounter(index));
+      }
+    });
+  }
+
+  function decrementProductAmount({productId, attributes}) {
+    productList.forEach(({id, chosenAttributes}, index) => {
+      if (id === productId && _.isEqual(chosenAttributes, attributes)) {
+        dispatch(decrementProductCounter(index));
+      }
+    });
+  }
+
+  return {addToCart, getProductAmount, getTotalAmount, incrementProductAmount, decrementProductAmount, clearProductCart};
 }

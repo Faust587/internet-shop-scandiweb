@@ -16,10 +16,14 @@ export const cartSlice = createSlice({
       state.productList[action.payload].amount++;
     },
     decrementProductCounter: (state, action) => {
-      state.productList[action.payload].amount--;
+      if (state.productList[action.payload].amount > 0) state.productList[action.payload].amount--;
+      if (state.productList[action.payload].amount === 0) state.productList.splice(action.payload, 1);
     },
     deleteProductFromCart: (state, action) => {
       state.productList.splice(action.payload, 1);
+    },
+    clearCart: state => {
+      state.productList = [];
     }
   }
 });

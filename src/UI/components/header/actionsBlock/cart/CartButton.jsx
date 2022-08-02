@@ -11,7 +11,7 @@ const CartButton = () => {
   return (
     <CartImage onClick={() => setActive(prevState => !prevState)}>
       {productAmount === 0 ? null : <ProductCounter>{productAmount}</ProductCounter>}
-      {active ? <CartPopupMenu /> : null}
+      {active ? <CartPopupMenu setActive={setActive} /> : null}
     </CartImage>
   );
 }

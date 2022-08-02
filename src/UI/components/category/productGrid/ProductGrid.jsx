@@ -5,6 +5,7 @@ import {useQuery} from "@apollo/client";
 import {GET_PRODUCTS_QUERY} from "../../../../graphQL/Queries";
 import {useSelector} from "react-redux";
 import {useParams} from "react-router-dom";
+import ProductPreloader from "../../preloader/ProductPreloader";
 
 
 const ProductGrid = () => {
@@ -16,7 +17,7 @@ const ProductGrid = () => {
   const {data, loading, error} = useQuery(GET_PRODUCTS_QUERY, { variables: { category: categoryName } });
 
 
-  if (loading) return "Loading...";
+  if (loading) return <ProductPreloader />;
   if (error) return <pre>{error.message}</pre>
 
   return (
