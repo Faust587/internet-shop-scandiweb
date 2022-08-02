@@ -1,18 +1,23 @@
 {
   "files": {
     "main.css": "/internet-shop-scandiweb/static/css/main.90f6920e.css",
-    "main.js": "/internet-shop-scandiweb/static/js/main.f9ffbb7b.js",
+    "main.js": "/internet-shop-scandiweb/static/js/main.b8f65753.js",
+    "static/media/category-preloader.gif": "/internet-shop-scandiweb/static/media/category-preloader.269ac16322c90dceff57.gif",
     "static/media/a-logo.svg": "/internet-shop-scandiweb/static/media/a-logo.aa8aea486fcc496a6f8322e3d85d02b4.svg",
     "static/media/empty-cart.svg": "/internet-shop-scandiweb/static/media/empty-cart.54031f95425f8f8852b76cee4a7093f4.svg",
     "static/media/cart-logo.svg": "/internet-shop-scandiweb/static/media/cart-logo.107200de550aa9c01e40546f7017578d.svg",
     "index.html": "/internet-shop-scandiweb/index.html",
+    "static/media/plus-square.svg": "/internet-shop-scandiweb/static/media/plus-square.d2387085f4f52eb46c48ff30ff062a6a.svg",
+    "static/media/slider-right.svg": "/internet-shop-scandiweb/static/media/slider-right.f3d4b2c79af4ecfc5143bbc74d014025.svg",
+    "static/media/slider-left.svg": "/internet-shop-scandiweb/static/media/slider-left.1ca45c0b8b9ece68562c1f6be07fecdf.svg",
+    "static/media/minus-square.svg": "/internet-shop-scandiweb/static/media/minus-square.20ec3b86ad95ef2f03302fec67b86b55.svg",
     "static/media/closed.svg": "/internet-shop-scandiweb/static/media/closed.766d7b11f183f77a1e40c47ea18dd7ee.svg",
     "static/media/opened.svg": "/internet-shop-scandiweb/static/media/opened.f50a5cf5cf8bfef55adfa0e02aae74ee.svg",
     "main.90f6920e.css.map": "/internet-shop-scandiweb/static/css/main.90f6920e.css.map",
-    "main.f9ffbb7b.js.map": "/internet-shop-scandiweb/static/js/main.f9ffbb7b.js.map"
+    "main.b8f65753.js.map": "/internet-shop-scandiweb/static/js/main.b8f65753.js.map"
   },
   "entrypoints": [
     "static/css/main.90f6920e.css",
-    "static/js/main.f9ffbb7b.js"
+    "static/js/main.b8f65753.js"
   ]
 }
